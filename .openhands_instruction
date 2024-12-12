@@ -1,0 +1,73 @@
+# Repository Overview
+
+This repository hosts a Next.js application focused on creating a responsive, high-performance web application. OpenHands is tasked with automating issue resolution, feature development, and project maintenance by following the guidelines outlined below.
+
+Repository Structure:
+
+-   Frontend:
+    -   pages/: Contains Next.js route-driven pages.
+    -   components/: Stores reusable React components.
+    -   styles/: Holds CSS files, including global styles and CSS modules.
+-   Static Assets:
+    -   public/: Contains images, icons, and other static assets accessible via /public.
+
+General Setup:
+
+-   Main build command:
+    -   To install dependencies: npm install
+    -   To start the development server: npm run dev
+    -   To build the application: npm run build
+-   Development environment setup:
+    -   Ensure Node.js (v18.x or later) and npm are installed.
+    -   The app uses TypeScript, ESLint, and Prettier for development workflows.
+-   Pre-commit checks:
+    -   Run linting: npm run lint
+    -   Format code: npm run format (if configured with Prettier)
+
+Backend:
+
+-   Location and structure:
+    -   Backend logic is not included in this repository.
+    -   Any API needs should utilize Next.js API routes in pages/api/.
+-   Environment requirements:
+    -   Environment variables should be stored in a .env.local file.
+    -   Example .env.local file:
+        API_KEY=your-api-key
+        BASE_URL=your-api-base-url
+
+Frontend:
+
+-   Setup prerequisites:
+    -   Install all dependencies with npm install.
+    -   Create a .env.local file for environment variables.
+-   Build and test commands:
+    -   Build the app: npm run build
+    -   Test the app: npm run test
+-   Environment variables:
+    -   Ensure that sensitive configurations (e.g., API keys) are loaded from .env.local.
+
+Testing Guidelines:
+
+-   Test location:
+    -   Tests are colocated with components and pages, with filenames following the pattern \*.test.tsx.
+    -   End-to-end tests (if present) are located in the tests/ folder.
+-   Running tests:
+    -   Run unit tests: npm run test
+    -   For coverage: npm run test:coverage
+-   Conventions:
+    -   Use Jest and React Testing Library for all tests.
+    -   Aim for 100% test coverage on core functionality.
+
+Additional Guidelines:
+
+-   Code style requirements:
+    -   Follow Airbnb's JavaScript/TypeScript style guide.
+    -   Use ESLint with Prettier integration for consistent formatting.
+-   Special considerations:
+    -   For performance optimizations, use Next.js-specific features like getStaticProps and getServerSideProps.
+-   Common workflows:
+    -   Add a new feature:
+        1. Create a branch using the naming convention feature/<name>.
+        2. Write code in the components/ or pages/ directory.
+        3. Add appropriate tests.
+        4. Create a PR with a detailed description of changes.
