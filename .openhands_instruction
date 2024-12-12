@@ -31,10 +31,8 @@ Backend:
     -   Any API needs should utilize Next.js API routes in pages/api/.
 -   Environment requirements:
     -   Environment variables should be stored in a .env.local file.
-    -   Example .env.local file:
-        API_KEY=your-api-key
-        BASE_URL=your-api-base-url
-
+    -   Ensure that sensitive configurations (e.g., API keys) are loaded from .env.local.
+    
 Frontend:
 
 -   Setup prerequisites:
@@ -67,7 +65,7 @@ Additional Guidelines:
     -   For performance optimizations, use Next.js-specific features like getStaticProps and getServerSideProps.
 -   Common workflows:
     -   Add a new feature:
-        1. Create a branch using the naming convention feature/<name>.
-        2. Write code in the components/ or pages/ directory.
-        3. Add appropriate tests.
-        4. Create a PR with a detailed description of changes.
+        - Create a branch using the naming convention feature/<name>.
+        - Write code in the components/ or pages/ directory.
+        - Add appropriate tests.
+        - Create a PR with a detailed description of changes.
